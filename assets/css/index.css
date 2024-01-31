@@ -1,12 +1,20 @@
 body {
   text-align: center;
   font-size: 1.5rem;
-  color: rgb(67, 67, 122);
+  color: rgb(48, 53, 126);
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(166, 166, 221);
+  background-color: rgb(103, 133, 216);
   padding: 2rem;
 }
 
-.form-group {
-  color: rgb(39, 31, 145);
+button {
+  display: block;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 2rem;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 14px 24px;
+  background: rgb(73, 73, 155);
+  color: white;
 }

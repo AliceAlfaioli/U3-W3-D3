@@ -7,14 +7,17 @@
     <title>Esercizio Dom Task List</title>
   </head>
   <body>
-    <h1>Dinamic List</h1>
     <form>
-      <div class="task">
+      <div>
+        <label class="title" for="input1">Dinamic List</label>
         <input type="text" id="taskname" placeholder="Inserisci il nome del task" required />
+        <button id="add" type="submit">ADD</button>
       </div>
-      <button type="submit" id="add">ADD</button>
+      <hr />
+
+      <h3 id="listh3">Cose da fare</h3>
+      <ul id="listul"></ul>
     </form>
-    <ul id="lista"></ul>
 
     <script src="./Js/index.js"></script>
   </body>

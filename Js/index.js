@@ -1,18 +1,27 @@
-const taskname = document.getElementById("taskaname");
+const form = document.querySelector("form");
 
-const bottone = document.getElementById("add");
-bottone.onclick = function () {
-  if (taskname.value !== "") {
-    console.log(taskname.value);
-    const lista = document.getElementById("lista");
-    console.log(lista);
-    const li = document.createElement("li");
-    li.onclick = function (e) {
-      e.target.remove();
-    };
-    li.innerText = taskname.value;
-    console.log(li);
-    lista.appendChild(li);
-    taskname.value = "";
-  }
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+});
+
+const ulList = document.getElementById("listul");
+
+let function1 = function () {
+  const inputLista = document.getElementById("input1");
+  const myData = {
+    inserisciLista: inputLista.value,
+  };
+  let li = document.createElement("li");
+  li.innerText = myData.inserisciLista;
+  li.addEventListener("click", function2);
+  ulList.appendChild(li);
+  inputLista.value = "";
+  console.log(ulList);
+};
+
+const buttonClick = document.getElementById("add");
+buttonClick.onlick = function1;
+
+const function2 = function (e) {
+  e.currentTarget.classList.add("addClass");
 };
